@@ -59,11 +59,11 @@ nav {
   background: transparent;
   height: 8vh;
   color: #48a14d;
-  cursor: pointer;
   counter-reset: css-counter 0
 }
 
 nav >div {
+  cursor: pointer;
   background: initial;
   counter-increment: css-counter 1;
 }
@@ -158,7 +158,7 @@ section {
 }
 
 .slide-content {
-  padding-top: 4rem;
+  padding-top: 2rem;
   display: flex;
 }
 
@@ -176,8 +176,8 @@ section {
 .tiles-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: .2rem;
+  height: fit-content;
 }
 
 .tiles {
@@ -233,6 +233,7 @@ section {
 
 .tiles-content-wrapper {
   position: relative;
+  height: 100%;
 }
 
 .tiles-content-wrapper::before {
@@ -262,4 +263,10 @@ section {
 .org-heading {
   font-size:2rem;
   font-weight: 500;
+}
+.org-work-list {
+  font-size: 16px;
+}
+.org-work-list>ul>li {
+  margin-bottom: .75rem;
 }
