@@ -11,6 +11,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 a:visited {
   text-decoration: none;
@@ -256,4 +257,9 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap:1.5rem;
+}
+
+.org-heading {
+  font-size:2rem;
+  font-weight: 500;
 }
