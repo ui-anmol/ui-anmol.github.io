@@ -265,8 +265,8 @@ section {
   font-weight: 500;
 }
 .org-work-list {
-  font-size: 16px;
+  font-size: 1rem;
 }
 .org-work-list>ul>li {
-  margin-bottom: .75rem;
+  margin-bottom: 1rem;
 }
