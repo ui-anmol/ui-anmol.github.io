@@ -1,0 +1,259 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto|Montserrat);
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  scroll-behavior: smooth; 
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  color: inherit;
+}
+
+
+::-webkit-scrollbar-track {
+  background: #3CA55C; 
+  /* background: -webkit-linear-gradient(to bottom, #999999, #48A14D); 
+  background: linear-gradient(to bottom, #999999, #48A14D); */
+  
+  border-radius: 2px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+background: rgba(255, 255, 255, 0.2);
+
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 4px solid #999;
+border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* background: #2a5d2d;  */
+  background: rgba(153, 153, 153, 1);
+  border:2px solid #999;
+
+backdrop-filter: blur(5px);
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:20px;
+  font-weight: 600;
+  gap: 2rem; 
+  padding-right: 5vw;
+  background: transparent;
+  height: 8vh;
+  color: #48a14d;
+  cursor: pointer;
+  counter-reset: css-counter 0
+}
+
+nav >div {
+  background: initial;
+  counter-increment: css-counter 1;
+}
+nav div:before {
+  content: counter(css-counter) ". ";
+  color: 	#999;
+  padding-right: .1rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-left: 5vw; 
+  height: 86vh;
+
+}
+.container {
+  position: relative;
+  
+  width: 90vw;
+  
+  overflow-y: scroll;
+ 
+}
+
+.side-panel {
+  width: 5vw;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email-text {
+  position: relative;
+  letter-spacing: 1.25;
+  color: #384349;
+}
+.email-text::before {
+  content: "";
+  position: absolute;
+  top: -105%;
+  left: 50%;
+  width: 1px;
+  height: 95%;
+  background-image: linear-gradient(to right, #48a14d, #384349);
+}
+.email-text::after {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  width: 1px;
+  height: 95%;
+  background-image: linear-gradient(to left, #48a14d, #384349);
+}
+
+footer {
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  color: #384349;
+  font-size: 16px;
+  font-weight: 900;
+}
+section {
+  height: 100%;
+  width: 100%;
+  background: #48A14D ;
+  opacity: 1;
+  color: #fff;
+  padding: 1rem 5rem;
+}
+
+.slide-heading {
+  position: relative;
+  text-align: right;
+  font-size: 64px;
+  font-weight: 900;
+}
+
+.slide-heading::before {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, #48a14d, #ffffff);
+}
+
+.slide-content {
+  padding-top: 4rem;
+  display: flex;
+}
+
+.slide-content-one {
+  gap: 10rem;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.slide-content-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.tiles-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .2rem;
+}
+
+.tiles {
+  display:flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  border:2px solid #ffffff;
+  border-radius:2px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.active-tile {
+  color: #48a14d;
+  background-color: #ffffff;
+}
+
+.intro {
+  line-height: 1.75;
+  font-family: "Montserrat";
+}
+.intro-img {
+  position: relative;
+  box-sizing:border-box;
+  height: fit-content;
+}
+
+.intro-img::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 10px;
+  left: 10px;
+  border: 5px solid white;
+  transition: top .5s ease-out,left .5s ease-out;
+}
+.intro-img:hover:before {
+  
+  top: 0;
+  left: 0;
+ 
+}
+
+.svg-glyph {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.tiles-content-wrapper {
+  position: relative;
+}
+
+.tiles-content-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:-5rem;
+    height: 100%;
+    width: 1px;
+    background-image: linear-gradient(to bottom, #48a14d, #ffffff,#48a14d);;
+  
+}
+
+
+.tiles-content {
+  display:none;
+}
+
+.tiles-content-active {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap:1.5rem;
+}
