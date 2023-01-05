@@ -52,9 +52,9 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size:20px;
+  font-size:16px;
   font-weight: 600;
-  gap: 2rem; 
+  gap: 1.5rem; 
   padding-right: 5vw;
   background: transparent;
   height: 8vh;
@@ -67,10 +67,25 @@ nav >div {
   background: initial;
   counter-increment: css-counter 1;
 }
-nav div:not(:last-child):before {
+nav>div:not(:last-child):before {
   content: counter(css-counter) ". ";
   color: 	#999;
   padding-right: .1rem;
+}
+
+nav>div:last-child {
+  padding: .5rem 1rem;
+  border-radius: 2px;
+ 
+  border: 2px solid #48A14D;
+  color: #48A14D;
+  background: #FFFFFF;
+}
+
+nav>div:last-child:hover {
+  color: #ffffff;
+  background: #48A14D;
+  border-color:#48A14D;
 }
 
 .wrapper {
