@@ -67,7 +67,7 @@ nav >div {
   background: initial;
   counter-increment: css-counter 1;
 }
-nav div:before {
+nav div:not(:last-child):before {
   content: counter(css-counter) ". ";
   color: 	#999;
   padding-right: .1rem;
