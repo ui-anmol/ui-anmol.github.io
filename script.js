@@ -2,7 +2,7 @@ const tiles = Array.from(document.getElementsByClassName('tiles'));
 const tilesContent = Array.from(document.getElementsByClassName('tiles-content'));
 function tileSelection (event) {
     console.log()
-    if(!event.target.classList.contains("active-tile") && event.target.classList.contains("tiles") {
+    if(!event.target.classList.contains("active-tile") && event.target.classList.contains("tiles")) {
         tiles.forEach(e => e.classList.remove("active-tile"));
         event.target.classList.add("active-tile")
     }
