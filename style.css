@@ -169,7 +169,6 @@ section {
 }
 
 .slide-content-two {
-  display: flex;
   flex-direction: column;
 }
 
@@ -267,6 +266,6 @@ section {
 .org-work-list {
   font-size: 1rem;
 }
-.org-work-list>ul>li {
+li {
   margin-bottom: 1rem;
 }
