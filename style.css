@@ -241,9 +241,13 @@ section {
 }
 
 .svg-glyph {
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
+}
+
+.svg-glyph:hover {
+  color: var(--primary-color);
 }
 
 .tiles-content-wrapper {
