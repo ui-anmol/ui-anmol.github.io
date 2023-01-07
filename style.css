@@ -51,6 +51,8 @@ border-radius: 2px;
 
 backdrop-filter: blur(5px);
 }
+
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -70,11 +72,7 @@ nav >div {
   background: initial;
   counter-increment: css-counter 1;
 }
-nav>div:not(:last-child):before {
-  content: counter(css-counter) ". ";
-  color: 	var( --tertiary-color);
-  padding-right: .1rem;
-}
+
 
 nav>div:last-child {
   padding: .5rem 1rem;
@@ -183,10 +181,13 @@ section {
   font-size: 20px;
   font-weight: 400;
 }
-
 .slide-content-two {
-  flex-direction: column;
+  gap: 10rem;
+  font-size: 20px;
+  font-weight: 400;
 }
+
+
 
 .tiles-wrapper {
   display: flex;
@@ -221,23 +222,7 @@ section {
   position: relative;
   box-sizing:border-box;
   height: fit-content;
-}
-
-.intro-img::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 10px;
-  left: 10px;
-  border: 5px solid var(--secondary-color);
-  transition: top .5s ease-out,left .5s ease-out;
-}
-.intro-img:hover:before {
-  
-  top: 0;
-  left: 0;
- 
+  width: fit-content;
 }
 
 .svg-glyph {
@@ -288,4 +273,81 @@ section {
 }
 li {
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+      height: 5vh;
+      justify-content: flex-start;
+      align-items: center;
+      gap:.5rem;
+  }
+  nav>div:last-child {
+    display: none;
+  }
+  .wrapper {
+    margin-left: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  section {
+    padding: 1rem 1.5rem;
+  }
+  .slide-heading {
+    font-size: 2rem;
+  }
+  .slide-content-one {
+    gap: 1rem;
+   flex-direction: column-reverse;
+   font-size: 1rem;
+  }
+  .slide-content-two {
+    flex-direction: column;
+    font-size: 1rem;
+    gap:2rem;
+  }
+  .side-panel{
+    display: none;
+  }
+  .org-heading {
+    font-size: 1.5rem;
+  }
+  .tiles-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:0.75rem
+  }
+  .tiles-content-wrapper {
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav>div:not(:last-child):before {
+    content: counter(css-counter) ". ";
+    color: 	var( --tertiary-color);
+    padding-right: .1rem;
+  }
+  .intro-img::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    border: 5px solid var(--secondary-color);
+    transition: top .5s ease-out,left .5s ease-out;
+  }
+  .intro-img:hover:before {
+    
+    top: 0;
+    left: 0;
+   
+  }
+
+  .slide-content-one {
+    justify-content: center;
+    align-items: center;
+  }
 }
