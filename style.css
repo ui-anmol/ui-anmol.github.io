@@ -291,6 +291,7 @@ li {
   }
   .wrapper {
     margin-left: 0;
+    height: 91vh;
   }
   .container {
     width: 100%;
@@ -324,6 +325,9 @@ li {
   }
   .tiles-content-wrapper {
     padding-left: 1rem;
+  }
+  footer {
+    height: 4vh;
   }
 }
 
