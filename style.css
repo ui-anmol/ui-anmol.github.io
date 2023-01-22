@@ -10,13 +10,7 @@ body {
   scroll-behavior: smooth; 
 }
 
-body {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
+
 :root {
   --primary-color: #0A4C4C;
   --secondary-color: #ffffff;
