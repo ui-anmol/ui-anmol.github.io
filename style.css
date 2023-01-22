@@ -54,6 +54,8 @@ backdrop-filter: blur(5px);
 
 
 nav {
+  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -94,6 +96,8 @@ nav>div:last-child:hover {
   justify-content: center;
   margin-left: 5vw; 
   height: 86vh;
+  z-index: 1;
+  position: relative;
 
 }
 .container {
@@ -136,6 +140,8 @@ nav>div:last-child:hover {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   height: 6vh;
   display: flex;
   justify-content: center;
@@ -276,6 +282,54 @@ li {
   font-style: italic;
 }
 
+.banner {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 900;
+  padding: 5rem 10rem;
+}
+
+/* .banner.hidden {
+ z-index: 0;
+} */
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q::before {
+    content: open-quote;
+    font-size: 3.5rem;
+}
+q::after {
+    content: close-quote;
+    font-size: 3.5rem;
+}
+
+/* .banner > span:first-child::before {
+  content: open-quote;
+  position: absolute;
+  font-size: 8rem;
+  top: 0;
+  left: 0;
+}
+.banner > span:last-child::after {
+  content: close-quote;
+  position: absolute;
+  font-size: 8rem;
+  top: 0;
+  right: 0;
+} */
+
 @media screen and (max-width: 768px) {
   html {
     height: 100vh;
@@ -286,6 +340,8 @@ li {
       align-items: center;
       gap:1.25rem;
       padding-left: 1.5rem;
+      z-index: 1;
+   
   }
   nav>div:last-child {
     display: none;
@@ -293,6 +349,7 @@ li {
   .wrapper {
     margin-left: 0;
     height: 91vh;
+    z-index: 1;
   }
   .container {
     width: 100%;
@@ -330,7 +387,12 @@ li {
   footer {
     height: 4vh;
     font-size: 1rem;
-    gap:1.25rem
+    gap:1.25rem;
+    z-index: 1;
+  }
+  .banner {
+    padding: 5rem 2rem;
+    line-height: 1.5;
   }
 }
 
