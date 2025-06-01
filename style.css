@@ -12,46 +12,45 @@ body {
 
 
 :root {
-  --primary-color: #0A4C4C;
-  --secondary-color: #ffffff;
-  --tertiary-color:#999999
-  --secondary-text-color: #384349;
+  --primary-color: #FAF3E0;
+  --secondary-color: #FF6F61;
+  --tertiary-color:#6B4226;
+  --secondary-text-color: #6B4226;
   --pane-padding: 5px 42px;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 a:visited {
   text-decoration: none;
   color: inherit;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   color: inherit;
 }
 
-
 ::-webkit-scrollbar-track {
-  background: var(--primary-color); 
+  background: var(--primary-color);
   border-radius: 2px;
 }
  
-
 ::-webkit-scrollbar-thumb {
-background: rgba(255, 255, 255, 0.2);
-
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 4px solid var( --tertiary-color);
+ background: var(--secondary-color);
+border-radius: 2px;
+backdrop-filter: blur(105px);
+-webkit-backdrop-filter: blur(105px);
 border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(153, 153, 153, 1);
-  border:2px solid var(--secondary-text-color);
-
-backdrop-filter: blur(5px);
+  cursor: grab;
+  backdrop-filter: blur(5px);
 }
 
 
@@ -61,13 +60,13 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size:16px;
+  font-size:15px;
   font-weight: 600;
   gap: 1.5rem; 
-  padding-right: 5vw;
+  padding-right: 4vw;
   background: transparent;
-  height: 8vh;
-  color: var(--primary-color);
+  height: 5vh;
+  color: var(--secondary-text-color);
   counter-reset: css-counter 0
 }
 
@@ -77,11 +76,9 @@ nav >div {
   counter-increment: css-counter 1;
 }
 
-
 nav>div:last-child {
   padding: .5rem 1rem;
   border-radius: 2px;
- 
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
   background: var(--secondary-color);
@@ -96,29 +93,30 @@ nav>div:last-child:hover {
 .wrapper {
   display: flex;
   justify-content: center;
-  margin-left: 5vw; 
-  height: 86vh;
+  margin-left: 4vw; 
+  height: 90vh;
   z-index: 1;
   position: relative;
-
 }
+
 .container {
   position: relative;
-  width: 90vw;
-  height: 86vh;
+  width: 92vw;
+  height: 90vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
  
 }
 
 .side-panel {
-  width: 5vw;
+  width: 4vw;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .email-text {
   position: relative;
   letter-spacing: 1.25;
@@ -146,19 +144,19 @@ nav>div:last-child:hover {
 footer {
   position: relative;
   z-index: 1;
-  height: 6vh;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .75rem;
+  gap: 1rem;
   color: var(--secondary-text-color);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
 }
+
 section {
   scroll-snap-align: start;
   width: 100%;
-  height: 86vh;
   background: var(--primary-color);
   opacity: 1;
   color:  var(--secondary-color);
@@ -198,12 +196,10 @@ section {
   font-weight: 400;
 }
 
-
-
 .tiles-wrapper {
   display: flex;
   flex-direction: column;
-  gap: .2rem;
+  gap: 1rem;
   height: fit-content;
 }
 
@@ -216,7 +212,6 @@ section {
   border-radius:2px;
   padding: 1rem 2rem;
   cursor: pointer;
-  font-weight: 600;
   font-size: 16px;
 }
 
@@ -229,6 +224,7 @@ section {
   line-height: 1.75;
   font-family: "Montserrat";
 }
+
 .intro-img {
   position: relative;
   box-sizing:border-box;
@@ -262,7 +258,6 @@ section {
   
 }
 
-
 .tiles-content {
   display:none;
 }
@@ -279,12 +274,13 @@ section {
   font-size:2rem;
   font-weight: 500;
 }
+
 .org-work-list {
   font-size: 1rem;
 }
+
 li {
-  margin-bottom: 1rem;
-  font-style: italic;
+  margin-bottom: .75rem;
 }
 
 .banner {
@@ -304,36 +300,6 @@ li {
   padding: 5rem 10rem;
 }
 
-/* .banner.hidden {
- z-index: 0;
-} */
-
-q {
-  quotes: "“" "”" "‘" "’";
-}
-q::before {
-    content: open-quote;
-    font-size: 3.5rem;
-}
-q::after {
-    content: close-quote;
-    font-size: 3.5rem;
-}
-
-/* .banner > span:first-child::before {
-  content: open-quote;
-  position: absolute;
-  font-size: 8rem;
-  top: 0;
-  left: 0;
-}
-.banner > span:last-child::after {
-  content: close-quote;
-  position: absolute;
-  font-size: 8rem;
-  top: 0;
-  right: 0;
-} */
 
 @media screen and (max-width: 768px) {
   html {
