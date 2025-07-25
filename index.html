@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link rel="stylesheet" href="./style.css">
-        <script src="./script.js" defer></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anmol Singh - Web Developer in Stockholm</title>
+    <meta name="description" content="Anmol Singh is a web developer based in Stockholm with 9 years of experience in banking, insurance, and fintech. Portfolio, experience, and contact information.">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+
+    <meta property="og:title" content="Anmol Singh – Web Developer in Stockholm">
+    <meta property="og:description" content="Anmol Singh is a web developer based in Stockholm with 9 years of experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ui-anmol.github.io/">
+    <meta property="og:image" content="https://ui-anmol.github.io/intro.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anmol Singh – Web Developer in Stockholm">
+    <meta name="twitter:description" content="Anmol Singh is a web developer based in Stockholm with 9 years of experience.">
+    <meta name="twitter:image" content="https://ui-anmol.github.io/intro.jpg">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Anmol Singh",
+            "jobTitle": "Web Developer",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Stockholm",
+                "addressCountry": "Sweden"
+            },
+            "url": "https://ui-anmol.github.io/",
+            "sameAs": [
+                "https://github.com/ui-anmol",
+                "https://www.linkedin.com/in/anmol-singh94/"
+            ]
+}
+</script>
+</head>
     <body>
         <nav>
             <div><a href="#about">About</a></div>
@@ -17,7 +49,9 @@
                     <div class="slide-heading">About</div>
                     <div class="slide-content slide-content-one">
                         <div class="intro">
-                            <p>Hola! My name is Anmol. I am a web developer with 9 years of experience. I have had the privilege of working with well-renowned firms and organizations in the Banking & Insurance domain as a consultant and as an employee. I am currently working as a Software Engineer with Swedbank.</p>
+                            <h1>Anmol Singh</h1>
+                            <h3>Web developer based in Stockholm</h3>
+                            <p>I am a web developer with 9 years of experience. I have had the privilege of working with well-renowned firms and organizations in the Banking & Insurance domain as a consultant and as an employee. I am currently working as a Software Engineer with Swedbank.</p>
                             <p>Over the years, I have aggregated hands-on experience with various Javascript libraries and frameworks. From building mobile applications and middleware to taking care of UX requirements, performance, responsiveness and accessibility issues, I am always open to new challenges.</p>
                           
                             </div>
@@ -30,13 +64,16 @@
                     <div class="slide-heading">Experience</div>
                     <div class="slide-content slide-content-two">
                             <div class="tiles-wrapper" onclick="tileSelection(event)">
-                                <div class="tiles active-tile" id="tile">Capgemini</div>
+                                <div class="tiles active-tile" id="tile">Swedbank</div>
                                 <div class="tiles" id="tile">Infosys</div>
-                                <div class="tiles" id="tile">Swedbank</div>
+                                <div class="tiles" id="tile">Capgemini</div>
+                                
+                                
                             </div>
                             <div class="tiles-content-wrapper">
-                                <div class="tiles-content tiles-content-active" data-display="Capgemini">
+                                <div class="tiles-content" data-display="Capgemini">
                                     <div class="org-heading">Capgemini</div>
+                                     <div class="org-heading-desc">Pune (July 2016 - July 2019)</div>
                                     <div class="org-work-list">
                                         <ul>
                                             <li>
@@ -82,6 +119,7 @@
                                 </div> 
                                 <div class="tiles-content" data-display="Infosys">
                                     <div class="org-heading">Infosys</div>
+                                    <div class="org-heading-desc">Pune (July 2019 - Aug 2022)</div>
                                     <div class="org-work-list">
                                         <ul>
     
@@ -102,8 +140,9 @@
                                             </ul>
                                     </div>
                                 </div> 
-                                <div class="tiles-content" data-display="Swedbank">
+                                <div class="tiles-content tiles-content-active" data-display="Swedbank">
                                     <div class="org-heading">Swedbank</div>
+                                    <div class="org-heading-desc"> Stockholm (Sep 2022 - PRESENT)</div>
                                     <div class="org-work-list">
                                         <ul>
                                             <li>

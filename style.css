@@ -24,6 +24,9 @@ body {
   background: #f2f2f2;;
 }
 
+h1,h2,h3 {
+  color: var(--secondary-color);
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -265,12 +268,17 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap:1.5rem;
 }
 
 .org-heading {
   font-size:2rem;
   font-weight: 500;
+  color: var(--secondary-color);
+}
+.org-heading-desc {
+  font-size:1rem;
+  color: var(--secondary-color);
+  padding-bottom: 2rem;
 }
 
 .org-work-list {
