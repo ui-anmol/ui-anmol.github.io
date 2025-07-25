@@ -14,7 +14,7 @@ body {
 
 :root {
   --primary-color: #FAF3E0;
-  --secondary-color: #7c4dff;
+  --secondary-color: #00ffd5;
   --tertiary-color:#1c1c1c;
   --secondary-text-color: #1c1c1c;
   --pane-padding: 5px 42px;
@@ -77,15 +77,14 @@ nav >div {
 nav>div:last-child {
   padding: .5rem 1rem;
   border-radius: 2px;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   background: var(--secondary-color);
 }
 
 nav>div:last-child:hover {
   color:  var(--secondary-color);
-  background: var(--primary-color);
-  border-color:var(--primary-color);
+  background: var(--tertiary-color);
+  border-color:var(--tertiary-color);
 }
 
 .wrapper {
@@ -103,7 +102,7 @@ nav>div:last-child:hover {
   height: 90vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  background: rgba(0, 0, 0, 0.6);
+  background:  var(--tertiary-color);
   backdrop-filter: blur(10px);
   color: #f8f8f8;
  
@@ -179,7 +178,7 @@ section {
 }
 
 .slide-content {
-  padding-top: 2rem;
+  padding-top: 4rem;
   display: flex;
 }
 
@@ -206,7 +205,7 @@ section {
   justify-content: center;
   align-items: flex-start;
   color:  var(--secondary-color);
-  border:none;
+  border:1px solid var(--secondary-color);
   border-radius:2px;
   padding: 1rem 2rem;
   cursor: pointer;
@@ -215,7 +214,7 @@ section {
 }
 
 .active-tile {
-  color: var(--primary-color);
+  color: var(--tertiary-color);
   background-color:  var(--secondary-color);
 }
 
@@ -297,6 +296,22 @@ li {
   flex-direction: column;
   font-weight: 900;
   padding: 5rem 10rem;
+}
+
+.work-timeline {
+  padding-left: 30px;
+  border-left:2px solid #00ffd5;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-timeline-step {
+  padding: 20px;
+}
+
+.work-timeline-step-desc {
+
 }
 
 
