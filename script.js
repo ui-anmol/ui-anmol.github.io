@@ -1,9 +1,3 @@
-const banner = document.getElementsByClassName('banner');
-console.log("banner",banner);
-setTimeout(() => {
-  banner[0].remove();
-}, 3000)
-
 const tiles = Array.from(document.getElementsByClassName('tiles'));
 const tilesContent = Array.from(document.getElementsByClassName('tiles-content'));
 function tileSelection (event) {
