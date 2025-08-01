@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -31,11 +31,13 @@
     <title>Anmol Singh - Web Developer in Stockholm</title>
     <meta
       name="description"
-      content="Anmol Singh is a web developer based in Stockholm with 9 years of experience in banking, insurance, and fintech. Portfolio, experience, and contact information."
+      content="Anmol Singh | Stockholm – Portfolio, experience, and contact information for Anmol Singh, web developer based in Stockholm, Sweden."
     />
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
-    <meta property="og:locale" content="en_SE" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:locale:alternate" content="en_SE" />
+
     <meta name="robots" content="index, follow" />
     <meta
       property="og:title"
@@ -59,6 +61,9 @@
       content="Anmol Singh is a web developer based in Stockholm with 9 years of experience."
     />
     <meta name="twitter:image" content="https://ui-anmol.github.io/intro.jpg" />
+    <meta name="geo.region" content="SE-AB" />
+    <meta name="geo.placename" content="Stockholm" />
+    <meta name="geo.position" content="59.3293;18.0686" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -96,6 +101,17 @@
     <nav>
       <div><a href="#about">About</a></div>
       <div><a href="#experience">Experience</a></div>
+      <div
+        class="btn btn-rect"
+        id="button-10"
+        onclick="toggleLanguageContent()"
+      >
+        <input type="checkbox" class="checkbox" />
+        <div class="knob">
+          <span>SV</span>
+        </div>
+        <div class="btn-bg"></div>
+      </div>
       <div>
         <a
           href="./anmol-singh-stockholm-web-developer-resume.pdf"
@@ -108,24 +124,41 @@
     <div class="wrapper">
       <div class="container">
         <section id="about">
-          <div class="slide-heading">About</div>
+          <div class="slide-heading lang-en-content">About</div>
+          <div class="slide-heading lang-sv-content">Om Mig</div>
           <div class="slide-content slide-content-one">
             <div class="intro">
-              <h1>Anmol Singh | Stockholm</h1>
-              <h2>Web Developer</h2>
-              <p>
+              <h1 class="lang-en-content">Anmol Singh | Stockholm</h1>
+              <h1 class="lang-sv-content">Anmol Singh | Stockholm</h1>
+              <h2 class="lang-en-content">Web Developer</h2>
+              <h2 class="lang-sv-content">Webbutvecklare</h2>
+              <p class="lang-en-content">
                 I am a web developer with 9 years of experience. I have had the
                 privilege of working with well-renowned firms and organizations
                 in the Banking & Insurance domain as a consultant and as an
                 employee. I am currently working as a Software Engineer with
                 Swedbank based in Stockholm.
               </p>
-              <p>
+              <p class="lang-sv-content">
+                Jag är en webbutvecklare med 9 års erfarenhet. Jag har haft
+                förmånen att arbeta med välrenommerade företag och
+                organisationer inom bank- och försäkringsdomänen som konsult och
+                som anställd. Jag arbetar för närvarande som mjukvaruingenjör på
+                Swedbank baserat i Stockholm.
+              </p>
+              <p class="lang-en-content">
                 Over the years, I have aggregated hands-on experience with
                 various Javascript libraries and frameworks. From building
                 mobile applications and middleware to taking care of UX
                 requirements, performance, responsiveness and accessibility
                 issues, I am always open to new challenges.
+              </p>
+              <p class="lang-sv-content">
+                Under åren har jag samlat praktisk erfarenhet av olika
+                Javascript-bibliotek och ramverk. Från att bygga
+                mobilapplikationer och middleware till att hantera UX-krav,
+                prestanda, responsivitet och tillgänglighetsproblem är jag
+                alltid öppen för nya utmaningar.
               </p>
             </div>
             <div class="intro-img">
@@ -141,7 +174,8 @@
           </div>
         </section>
         <section id="experience">
-          <div class="slide-heading">Experience</div>
+          <div class="slide-heading lang-en-content">Experience</div>
+          <div class="slide-heading lang-sv-content">Erfarenhet</div>
           <div class="slide-content slide-content-two">
             <div class="tiles-wrapper" onclick="tileSelection(event)">
               <div class="tiles active-tile" id="tile">Swedbank</div>
@@ -150,10 +184,16 @@
             </div>
             <div class="tiles-content-wrapper">
               <div class="tiles-content" data-display="Capgemini">
-                <h2>Capgemini</h2>
-                <h3 class="org-heading-desc">Pune (July 2016 - July 2019)</h3>
+                <h2 class="lang-en-content">Capgemini</h2>
+                <h2 class="lang-sv-content">Capgemini</h2>
+                <h3 class="org-heading-desc lang-en-content">
+                  Pune (July 2016 - July 2019)
+                </h3>
+                <h3 class="org-heading-desc lang-sv-content">
+                  Pune (Juli 2016 - Juli 2019)
+                </h3>
                 <div class="org-work-list">
-                  <ul>
+                  <ul class="lang-en-content">
                     <li>Worked on requirement gathering</li>
                     <li>Writing user stories & use cases</li>
                     <li>
@@ -182,13 +222,47 @@
                       Ag-grid,Highcharts and Moment.js
                     </li>
                   </ul>
+                  <ul class="lang-sv-content">
+                    <li>Arbetade med kravinsamling</li>
+                    <li>Skrev användarberättelser och användningsfall</li>
+                    <li>
+                      Byggde pappersprototyper, låg- och högfidelitetswireframes
+                    </li>
+                    <li>
+                      Utvecklade wireframes till responsiv HTML för dator-,
+                      surfplatta- och mobilvy
+                    </li>
+                    <li>
+                      Involverad i klientinteraktioner och leverans av POC:er
+                    </li>
+                    <li>Applikationsfrontendutveckling med Angular 6</li>
+                    <li>
+                      Implementering av affärslogik och skapande av RESTful
+                      tjänster
+                    </li>
+                    <li>Arbetade med kompatibilitet mellan webbläsare</li>
+                    <li>Implementering av Adobe Analytics</li>
+                    <li>Skrev enhetstester med Jest och Karma</li>
+                    <li>Tillgänglighetsimplementering med JAWSInspect</li>
+
+                    <li>
+                      Arbetade med olika tredjepartsbibliotek som Ag-grid,
+                      Highcharts och Moment.js
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div class="tiles-content" data-display="Infosys">
-                <h2>Infosys</h2>
-                <h3 class="org-heading-desc">Pune (July 2019 - Aug 2022)</h3>
+                <h2 class="lang-en-content">Infosys</h2>
+                <h2 class="lang-sv-content">Infosys</h2>
+                <h3 class="org-heading-desc lang-en-content">
+                  Pune (July 2019 - Aug 2022)
+                </h3>
+                <h3 class="org-heading-desc lang-sv-content">
+                  Pune (Juli 2019 - Aug 2022)
+                </h3>
                 <div class="org-work-list">
-                  <ul>
+                  <ul class="lang-en-content">
                     <li>Worked on Polymer 3.0 and Angular 11</li>
                     <li>
                       Built responsive views for desktop, tablet and mobile
@@ -215,16 +289,49 @@
                       Apollo-Angular, Bootstrap and Angular Material
                     </li>
                   </ul>
+                  <ul class="lang-sv-content">
+                    <li>Arbetade med Polymer 3.0 och Angular 11</li>
+                    <li>
+                      Byggde responsiva vyer för stationära datorer, surfplattor
+                      och mobila enheter
+                    </li>
+                    <li>Skapade återanvändbara webbkomponenter</li>
+                    <li>
+                      Implementerade mikro-frontend-arkitektur och server-side
+                      rendering med Angular Universal
+                    </li>
+                    <li>
+                      Skapade specifikationskompatibel GraphQL-server (serverlös
+                      miljö)
+                    </li>
+                    <li>
+                      Implementering av affärslogik, kommunikation med andra
+                      tjänster och publicering & mottagning av data
+                    </li>
+                    <li>Arbetade med tillgänglighetsproblem med NVDA</li>
+                    <li>Utförde DDA-testning</li>
+                    <li>Arbetade med kompatibilitet mellan webbläsare</li>
+                    <li>
+                      Integrerade tredjepartsbibliotek som Ag-Grid, MomentJS,
+                      Apollo-Angular, Bootstrap och Angular Material
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div
                 class="tiles-content tiles-content-active"
                 data-display="Swedbank"
               >
-                <h2>Swedbank</h2>
-                <h3 class="org-heading-desc">Stockholm (Sep 2022 - PRESENT)</h3>
+                <h2 class="lang-en-content">Swedbank</h2>
+                <h2 class="lang-sv-content">Swedbank</h2>
+                <h3 class="org-heading-desc lang-en-content">
+                  Stockholm (Sep 2022 - PRESENT)
+                </h3>
+                <h3 class="org-heading-desc lang-sv-content">
+                  Stockholm (Sep 2022 - NU)
+                </h3>
                 <div class="org-work-list">
-                  <ul>
+                  <ul class="lang-en-content">
                     <li>
                       Developed and maintained multiple large-scale Angular
                       applications within modern Nx monorepo setup, enabling
@@ -248,6 +355,30 @@
                       practices
                     </li>
                   </ul>
+                  <ul class="lang-sv-content">
+                    <li>
+                      Utvecklade och underhöll flera storskaliga
+                      Angular-applikationer inom modern Nx
+                      monorepo-konfiguration, vilket möjliggjorde modularitet,
+                      skalbarhet och effektiv koddelning mellan projekt.
+                    </li>
+                    <li>
+                      Implementerade lösningar för tillståndshantering med NgRx,
+                      vilket säkerställde effektivt dataflöde och
+                      tillståndskonsistens över komplexa applikationer.
+                    </li>
+                    <li>
+                      Samarbetade nära med UX-designers, backend-team och
+                      affärsintressenter för att samla in krav, definiera
+                      användarberättelser och översätta dem till tekniska
+                      specifikationer.
+                    </li>
+                    <li>
+                      Arkitektur & Verktyg - Ledde och bidrog till att skriva
+                      arkitekturbeskrivning som beskriver frontend-struktur,
+                      designbeslut, kommunikationsmönster och bästa praxis.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -255,12 +386,14 @@
         </section>
       </div>
       <div class="side-panel">
-        <div class="email-text">ui.anmol94@gmail.com</div>
+        <div class="email-text lang-en-content">ui.anmol94@gmail.com</div>
+        <div class="email-text lang-sv-content">ui.anmol94@gmail.com</div>
       </div>
     </div>
 
     <footer>
-      <div>I can also be found on</div>
+      <div class="lang-en-content">I can also be found on</div>
+      <div class="lang-sv-content">Du hittar mig även på</div>
       <div class="svg-glyph">
         <a
           href="https://github.com/ui-anmol"

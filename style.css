@@ -15,6 +15,22 @@ body {
   --tertiary-color: #1c1c1c;
   --secondary-text-color: #1c1c1c;
   --pane-padding: 5px 42px;
+  --lang-toggle-width: 74px;
+  --lang-toggle-height: 36px;
+  --lang-toggle-border-radius: 2px;
+  --lang-toggle-bg-checked: #fcebeb;
+  --knob-default-bg: #03a9f4;
+  --knob-checked-bg: #f44336;
+  --knob-text-color-active: #fff;
+  --knob-text-color-inactive: #4e4e4e;
+  --knob-transition-duration: 0.3s;
+  --knob-padding-vertical: 9px;
+  --knob-font-size: 10px;
+  --knob-element-width: 33px;
+  --knob-element-height: 10px;
+  --knob-top-offset: 4px;
+  --knob-horizontal-offset: 4px;
+  --knob-checked-left-offset: 37px;
 }
 
 body {
@@ -54,6 +70,15 @@ a:visited {
   cursor: grab;
 }
 
+.lang-en-content,
+.lang-sv-content {
+  display: none;
+}
+
+.lang-active {
+ display: block;
+}
+
 nav {
   z-index: 1;
   position: relative;
@@ -67,13 +92,11 @@ nav {
   background: transparent;
   height: 5vh;
   color: var(--secondary-text-color);
-  counter-reset: css-counter 0;
 }
 
 nav > div {
   cursor: pointer;
   background: initial;
-  counter-increment: css-counter 1;
 }
 
 nav > div:last-child {
@@ -87,6 +110,84 @@ nav > div:last-child:hover {
   color: var(--secondary-color);
   background: var(--tertiary-color);
   border-color: var(--tertiary-color);
+}
+
+.btn {
+  position: relative;
+  width: var(--lang-toggle-width);
+  height: var(--lang-toggle-height);
+  overflow: hidden;
+}
+
+.btn.btn-rect {
+  border-radius: var(--lang-toggle-border-radius);
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knob {
+  z-index: 2;
+}
+
+#button-10 .knob:before,
+#button-10 .knob:after,
+#button-10 .knob span {
+  position: absolute;
+  top: var(--knob-top-offset);
+  width: var(--knob-element-width);
+  height: var(--knob-element-height);
+  font-size: var(--knob-font-size);
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: var(--knob-padding-vertical) 0;
+  border-radius: var(--lang-toggle-border-radius);
+  transition: var(--knob-transition-duration) ease all;
+}
+
+#button-10 .knob:before {
+  content: "";
+  left: var(--knob-horizontal-offset);
+  background-color: var(--knob-default-bg);
+}
+
+#button-10 .knob:after {
+  content: "EN";
+  right: var(--knob-horizontal-offset);
+  color: var(--knob-text-color-inactive);
+}
+
+#button-10 .knob span {
+  display: inline-block;
+  left: var(--knob-horizontal-offset);
+  color: var(--knob-text-color-active);
+  z-index: 1;
+}
+
+#button-10 .checkbox:checked + .knob span {
+  color: var(--knob-text-color-inactive);
+}
+
+#button-10 .checkbox:checked + .knob:before {
+  left: var(--knob-checked-left-offset);
+  background-color: var(--knob-checked-bg);
+}
+
+#button-10 .checkbox:checked + .knob:after {
+  color: var(--knob-text-color-active);
+}
+
+#button-10 .checkbox:checked ~ .btn-bg {
+  background-color: var(--lang-toggle-bg-checked);
 }
 
 .wrapper {
@@ -354,14 +455,20 @@ li {
     gap: 1.25rem;
     z-index: 1;
   }
+  :root {
+    --lang-toggle-width: 60px;
+    --lang-toggle-height: 30px;
+    --knob-top-offset: 3px;
+    --knob-element-height: 9px;
+    --knob-font-size: 9px;
+    --knob-padding-vertical: 7px;
+    --knob-horizontal-offset: 3px;
+    --knob-element-width: 27px;
+    --knob-checked-left-offset: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  nav > div:not(:last-child):before {
-    content: counter(css-counter) ". ";
-    color: var(--tertiary-color);
-    padding-right: 0.1rem;
-  }
   .intro-img::before {
     box-sizing: border-box;
     content: "";
